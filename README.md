@@ -11,6 +11,7 @@ sudo docker run -it --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X
 apt-get update
 
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+
 source ~/.bashrc
 
 apt-get install ros-kinetic-turtlebot ros-kinetic-turtlebot-apps 
