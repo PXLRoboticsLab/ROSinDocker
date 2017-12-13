@@ -103,7 +103,26 @@ The next command allows you to take control of the turtlebot
 7: roslaunch turtlebot_teleop keyboard_teleop.launch
 ```
 Have fun crashing into walls without any consequences !
+# Troubleshooting
 
+If you get errors looking like this, kill all processes containing gazebo in their name
+```
+[gazebo_gui-3] process has died [pid 14341, exit code 139, cmd /opt/ros/kinetic/lib/gazebo_ros/gzclient __name:=gazebo_gui __log:=/root/.ros/log/9d06f718-e014-11e7-aaea-0242ac110002/gazebo_gui-3.log].
+log file: /root/.ros/log/9d06f718-e014-11e7-aaea-0242ac110002/gazebo_gui-3*.log
+```
+Get a list of the processes
+```
+ps ax
+```
+Copy paste the processes ID ( PID ) and kill it.
+```
+kill -9 PID
+```
+For other problems go to 
+
+https://answers.ros.org/ 
+
+http://answers.gazebosim.org/
 # Interesting links about ros/docker with gui or gazebo.
 
 http://wiki.ros.org/docker/Tutorials/GUI
