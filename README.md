@@ -2,29 +2,32 @@
 
 
 # Install docker
-1: sudo apt-get update
 
-2: sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    software-properties-common
+```
+1: sudo apt-get update
+```
+```
+2: sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+```
     
+```
 3: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    
-4: sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
-   
+```
+```
+4: sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+ ``` 
+ 
+ ```
 5: sudo apt-get update
+```
    
+   ```
 6: sudo apt-get install docker-ce
-   
+   ```
    To test the docker installation enter the following command
-   
+   ```
 7: sudo docker run hello-world
-   
+   ```
    If the output is hello world your installion has succeeded 
 
 # Start container with gpu rendering on
@@ -78,10 +81,14 @@ Have fun crashing into walls without any consequences !
 
 # Interesting links about ros/docker with gui or gazebo.
 
-http://wiki.ros.org/docker/Tutorials/GUI 
+http://wiki.ros.org/docker/Tutorials/GUI
+
 https://hub.docker.com/_/gazebo/
+
 https://hub.docker.com/r/osrf/gazebo/
+
 https://github.com/osrf/docker_images/tree/master/ros
+
 https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-docker-ce-1
 
 
