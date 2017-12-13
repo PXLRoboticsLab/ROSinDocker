@@ -37,6 +37,7 @@ We have to allow our xserver to be able to make a connection with the container.
 Now we can start the container.
 2: sudo docker run -it     --env="DISPLAY"     --env="QT_X11_NO_MITSHM=1"     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"     osrf/ros:kinetic-desktop-ful
 
+You can check if your gpu is working in docker by installing mesa-utils and typing the glxinfo command.
 
 # Installing turtlebot on the container
 Now we have to install and configure the turtlebot so we can spawn it in gazebo.
@@ -66,6 +67,8 @@ Declare the Gazebo world file for the turtlebot
 Launch an instance of the turtlebot , this may take a while to load into gazebo so dont freak out of your gazebo stays black for a couple of minutes. The load time decreases a lot after the first time.
 
 6: roslaunch turtlebot_gazebo turtlebot_world.launch
+
+The result should look like this : https://imgur.com/a/bYLPT
 
 The next command allows you to take control of the turtlebot
 
