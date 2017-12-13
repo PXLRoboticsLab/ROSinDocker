@@ -1,4 +1,4 @@
-# ROSinDocker
+# ROSinDocker UBUNTU16.04
 For a school project we are configuring robots with the robot operating system ( ros ) . For our testing environment we have set up a docker container which runs ros and gazebo. Like this we play around and test our scripts without having to install ros and gazebo ourselves. This also provides a perfect test environment so we dont have to take any risks with expensive robots.
 # Install docker
 ```
