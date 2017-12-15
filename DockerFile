@@ -1,0 +1,10 @@
+FROM osrf/ros:kinetic-desktop-full
+
+RUN apt-get update && apt-get install -y ros-kinetic-turtlebot && \
+apt-get install -y ros-kinetic-turtlebot-apps && \
+apt-get install -y ros-kinetic-turtlebot-interactions && \
+apt-get install -y ros-kinetic-turtlebot-simulator && \
+apt-get install -y ros-kinetic-kobuki-ftdi && \
+apt-get install -y ros-kinetic-ar-track-alvar-msgs && \
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc && \
+echo "export TURTLEBOT_GAZEBO_WORLD_FILE=/opt/ros/kinetic/share/turtlebot_gazebo/worlds/playground.world" >> ~/.bashrc
