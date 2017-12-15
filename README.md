@@ -48,7 +48,7 @@ Image : https://github.com/osrf/docker_images/tree/master/ros/kinetic/ubuntu/xen
 
 Let's test it
 ```
-2: sudo docker run -it     --env="DISPLAY"     --env="QT_X11_NO_MITSHM=1"     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"     osrf/ros:kinetic-desktop-full
+2: sudo docker run -it     --env="DISPLAY"     --env="QT_X11_NO_MITSHM=1"     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"     benjaminklingeleers/rosgazebo
 ```
 If for some reason you leave it and want to enter the container again use the following command
 ```
@@ -73,37 +73,15 @@ the result should look like this : https://imgur.com/a/fWWad
 # Installing turtlebot on the container
 Now we have to install and configure the turtlebot so we can spawn it in gazebo.
 All of the following commands are INSIDE the container 
-```
-1: apt-get update
-```
-```
-2: install all packets related to the turtlebot ( make sure to install ros-kinetic verion )
-apt-get install -y ros-kinetic-turtlebot 
-apt-get install -y ros-kinetic-turtlebot-apps 
-apt-get install -y ros-kinetic-turtlebot-interactions
-apt-get install -y ros-kinetic-turtlebot-simulator
-apt-get install -y ros-kinetic-kobuki-ftdi
-apt-get install -y ros-kinetic-ar-track-alvar-msgs
-```
-Source setup.bash to make the ros commands available everywhere.
-```
-3: echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
-```
-```
-4: source ~/.bashrc
-```
-Declare the Gazebo world file for the turtlebot
-```
-5: export TURTLEBOT_GAZEBO_WORLD_FILE=/opt/ros/kinetic/share/turtlebot_gazebo/worlds/playground.world
-```
+
 Launch an instance of the turtlebot , this may take a while to load into gazebo so dont freak out of your gazebo stays black for a couple of minutes. The load time decreases a lot after the first time.
 ```
-6: roslaunch turtlebot_gazebo turtlebot_world.launch
+1: roslaunch turtlebot_gazebo turtlebot_world.launch
 ```
 The result should look like this : https://imgur.com/a/bYLPT
 The next command allows you to take control of the turtlebot
 ```
-7: roslaunch turtlebot_teleop keyboard_teleop.launch
+2: roslaunch turtlebot_teleop keyboard_teleop.launch
 ```
 Have fun crashing into walls without any consequences !
 # Troubleshooting
