@@ -26,6 +26,9 @@ To test the docker installation enter the following command
 The output should be this : https://imgur.com/a/dCWBo
 
 # Start container with gpu rendering on
+
+Make sure to use Xserver: https://imgur.com/a/4EJ5C
+
 To run gazebo in the container we have to share the host's virtual environment with  the container. For more information on this topic you can look at the links on the bottom of this guide.
 We have to allow our xserver to be able to make a connection with the container.
 ```
