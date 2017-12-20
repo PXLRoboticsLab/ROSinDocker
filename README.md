@@ -34,21 +34,17 @@ We have to allow our xserver to be able to make a connection with the container.
 ```
 1: xhost +local:root
 ```
-When lauching the container we have to add some arguments in order to make everything work.
-
---env="DISPLAY"
-
---env="QT_X11_NO_MITSHM=1"
+When lauching the container we have to add a argument in order to make everything work.
 
 --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"
 
-These arguments allow us to expose our xhost to the container. By reading and writing through the X11 unix socket.
+This argument allows us to expose our xhost to the container. By reading and writing through the X11 unix socket.
 
 Image : https://github.com/osrf/docker_images/tree/master/ros/kinetic/ubuntu/xenial/desktop-full
 
 Let's test it
 ```
-2: sudo docker run -it     --env="DISPLAY"     --env="QT_X11_NO_MITSHM=1"     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"     benjaminklingeleers/rosgazebo
+2: sudo docker run -it   --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw"     benjaminklingeleers/rosgazebo
 ```
 If for some reason you leave it and want to enter the container again use the following command
 ```
