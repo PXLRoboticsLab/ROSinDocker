@@ -40,7 +40,7 @@ When lauching the container we have to add a argument in order to make everythin
 
 This argument allows us to expose our xhost to the container. By reading and writing through the X11 unix socket.
 
-Image : https://github.com/osrf/docker_images/tree/master/ros/kinetic/ubuntu/xenial/desktop-full
+Image : https://cloud.docker.com/swarm/benjaminklingeleers/repository/docker/benjaminklingeleers/rosgazebo/general
 
 Let's test it
 ```
